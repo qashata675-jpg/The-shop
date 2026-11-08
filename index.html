@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to The Shop — discover products selected for you.">
+  <title>The Shop</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #202124;
+      background: #f7f7f5;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header, main, footer { padding: 1.25rem max(1.25rem, calc((100% - 1080px) / 2)); }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #fff;
+      border-bottom: 1px solid #e8e8e5;
+    }
+    .brand { margin: 0; font-size: 1.35rem; }
+    nav { display: flex; gap: 1.25rem; }
+    nav a { color: inherit; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      margin: 2rem 0;
+      padding: clamp(2rem, 7vw, 5rem);
+      border-radius: 1rem;
+      background: #e9eee8;
+      text-align: center;
+    }
+    .hero h2 { margin: 0 0 .75rem; font-size: clamp(2rem, 5vw, 3.5rem); }
+    .hero p { margin: 0 auto 1.5rem; max-width: 38rem; line-height: 1.6; }
+    .button {
+      display: inline-block;
+      padding: .8rem 1.2rem;
+      border-radius: .5rem;
+      background: #202124;
+      color: #fff;
+      text-decoration: none;
+    }
+    .products-heading { margin: 2.5rem 0 1rem; }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+    .product {
+      padding: 1.25rem;
+      border: 1px solid #e8e8e5;
+      border-radius: .75rem;
+      background: #fff;
+    }
+    .product-art {
+      display: grid;
+      min-height: 150px;
+      margin-bottom: 1rem;
+      place-items: center;
+      border-radius: .5rem;
+      background: #f0f0ed;
+      font-size: 3rem;
+    }
+    .product h3 { margin: 0 0 .4rem; }
+    .product p { margin: 0; color: #5f6368; line-height: 1.5; }
+    footer { margin-top: 2rem; color: #5f6368; text-align: center; }
+
+    @media (max-width: 520px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="brand">The Shop</h1>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Find something you'll love.</h2>
+      <p>Welcome to The Shop. Explore a thoughtfully selected collection of everyday favorites.</p>
+      <a class="button" href="#products">Explore products</a>
+    </section>
+
+    <section id="products" aria-labelledby="products-heading">
+      <h2 class="products-heading" id="products-heading">Featured products</h2>
+      <div class="products">
+        <article class="product">
+          <div class="product-art" aria-hidden="true">☕</div>
+          <h3>Everyday Mug</h3>
+          <p>A simple, dependable mug for your favorite drink.</p>
+        </article>
+        <article class="product">
+          <div class="product-art" aria-hidden="true">🎒</div>
+          <h3>Weekend Bag</h3>
+          <p>A handy companion for commutes and short getaways.</p>
+        </article>
+        <article class="product">
+          <div class="product-art" aria-hidden="true">📓</div>
+          <h3>Pocket Notebook</h3>
+          <p>Room for plans, lists, and ideas wherever you go.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About The Shop</h2>
+      <p>We're building a friendly place to discover useful, well-chosen products. Product details and shopping features will be added as the store develops.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> The Shop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
